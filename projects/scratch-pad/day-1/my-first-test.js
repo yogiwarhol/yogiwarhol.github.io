@@ -17,7 +17,8 @@
  */
 function print(value) {
   // YOUR CODE BELOW HERE //
-  
+  var inputValue = "use strict";
+  console.log(value);
   
   
   // YOUR CODE ABOVE HERE //

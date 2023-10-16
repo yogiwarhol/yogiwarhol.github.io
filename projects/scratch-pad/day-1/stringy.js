@@ -14,7 +14,7 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    
+    return string.length;
 
 
     // YOUR CODE ABOVE HERE //
@@ -25,9 +25,8 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+return string.toLowerCase();
+console.log(lowercaseString)
     // YOUR CODE ABOVE HERE //
 }
 
@@ -36,8 +35,8 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+return string.toUpperCase();
+console.log(uppercaseString);
 
     // YOUR CODE ABOVE HERE //
 }
@@ -57,11 +56,14 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+    return inputString.toLowerCase().split(' ').join('-');
+}
+var inputString = 'Hello World';
+var dashCaseString = toDashCase(inputString);
+console.log(dashCaseString);
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -77,11 +79,15 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+    var lowerCaseString = inputString.toLowerCase();
+    var lowerCaseChar = character.toLowerCase();
+    return lowerCaseString.charAt(0) === lowerCaseChar;
+}
 
     
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -97,11 +103,14 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
+    var lowerCaseString = inputString.toLowerCase();
+    var lowerCaseChar = character.toLowerCase();
+    return lowerCaseString.charAt(lowerCaseString.length - 1) === lowerCaseChar;
+}
 
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
@@ -110,7 +119,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne + stringTwo
 
 
     // YOUR CODE ABOVE HERE //
@@ -129,7 +138,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+return argsArray.join(' ');
 
     // YOUR CODE ABOVE HERE //
 }
@@ -145,7 +154,11 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+if  (stringOne.length > stringTwo) {
+    return stringOne;
+} else {
+    return stringTwo;
+}
 
 
     // YOUR CODE ABOVE HERE //
@@ -160,7 +173,7 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne.localeCompare(stringTwo)
 
 
     // YOUR CODE ABOVE HERE //
@@ -176,7 +189,7 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne.localeCompare(stringTwo);
 
 
 
