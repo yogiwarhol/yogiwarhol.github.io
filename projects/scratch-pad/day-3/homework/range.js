@@ -23,6 +23,11 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+    let result = [];
+    
+    // Examples:
+    console.log(range(8, 14)); // Output: [8, 9, 10, 11, 12, 13, 14]
+    console.log(range(14, 8)); // Output: [14, 13, 12, 11, 10, 9, 8]
     
     
     

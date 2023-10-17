@@ -14,11 +14,15 @@
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-    
+    return function(value) {
+        return value > base;
+    };
+}
+
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an input base to test against, which could be a String or Number, 
@@ -27,12 +31,15 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+    return function(value) {
+        return value < base;
+    };
+}
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given a startsWith character, which will be a single character, return a 
@@ -55,12 +62,15 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(string) {
+        return string.endsWith(endsWith);
+    };
+}
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an Array of Strings and a Function designed to modify a String, 
@@ -90,8 +100,7 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+
     
     // YOUR CODE ABOVE HERE //
 }
