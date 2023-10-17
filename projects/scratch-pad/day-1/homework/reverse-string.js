@@ -21,14 +21,12 @@
 
 function reverseString(hello) {
     // YOUR CODE GOES BELOW HERE //
-    // establish a strored variable with empty value 
-    var reverseString = ''
-    // use loop method to indicate start and stop 
-    for (var i = inputString.length -1; i >=0; i--) { 
-     // concatenate the current character to the given string  
-     reversedString += inputString[i]
-      return reversedString
-    }
+   var reversedString = ''
+   for (var i = reverseString.length - 1; i >= 0; i--) {
+    var char = reversedString[i]
+    reversedString = reversedString + char
+   }
+    return reversedString
     // YOUR CODE GOES ABOVE HERE //
 }
 

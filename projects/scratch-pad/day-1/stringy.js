@@ -56,7 +56,7 @@ console.log(uppercaseString);
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    return inputString.toLowerCase().split(' ').join('-');
+    return string.split(' ').join('-').toLowerCase();
 }
 var inputString = 'Hello World';
 var dashCaseString = toDashCase(inputString);
@@ -79,8 +79,8 @@ console.log(dashCaseString);
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    var lowerCaseString = inputString.toLowerCase();
-    var lowerCaseChar = character.toLowerCase();
+    var lowerCaseString = string.toLowerCase();
+    var lowerCaseChar = char.toLowerCase();
     return lowerCaseString.charAt(0) === lowerCaseChar;
 }
 
@@ -103,8 +103,8 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    var lowerCaseString = inputString.toLowerCase();
-    var lowerCaseChar = character.toLowerCase();
+    var lowerCaseString = string.toLowerCase();
+    var lowerCaseChar = char.toLowerCase();
     return lowerCaseString.charAt(lowerCaseString.length - 1) === lowerCaseChar;
 }
 
@@ -137,8 +137,8 @@ return stringOne + stringTwo
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-    var args = Array.from(arguments);
-return argsArray.join(' ');
+     
+
 
     // YOUR CODE ABOVE HERE //
 }
@@ -154,7 +154,7 @@ return argsArray.join(' ');
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-if  (stringOne.length > stringTwo) {
+if  (stringOne.length > stringTwo.length) {
     return stringOne;
 } else {
     return stringTwo;
@@ -173,11 +173,17 @@ if  (stringOne.length > stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-return stringOne.localeCompare(stringTwo)
-
-
-    // YOUR CODE ABOVE HERE //
+if (stringOne <stringTwo) {
+    return 1
+}      else if (stringOne >stringTwo) {
+    return -1
+} else {
+    return 0
 }
+
+}
+    // YOUR CODE ABOVE HERE //
+
 
 
 /**
