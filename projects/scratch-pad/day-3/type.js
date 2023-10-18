@@ -14,12 +14,13 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
+    return Array.isArray(value);
+}
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an input value, return true if the value is an Object intended as a 
@@ -74,12 +75,41 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
+    if (typeof value === 'string') {
+        return 'string';
+      } else if (Array.isArray(value)) {
+        return 'array';
+      } else if (typeof value === 'object') {
+        if (value === null) {
+          return 'null';
+        } else if (value instanceof Date) {
+          return 'date';
+        } else {
+          return 'object';
+        }
+      } else if (typeof value === 'undefined') {
+        return 'undefined';
+      } else if (typeof value === 'number') {
+        return 'number';
+      } else if (typeof value === 'boolean') {
+        return 'boolean';
+      } else if (typeof value === 'function') {
+        return 'function';
+      } else {
+        return 'unknown'; // If none of the recognized types match
+      }
+    }
+    
+    
+    
+    
+    
     
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
