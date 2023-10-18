@@ -32,12 +32,18 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
+    return (
+        typeof value === 'object' &&
+        value !== null &&
+        !Array.isArray(value) &&
+        !(value instanceof Date)
+      );
+    }
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an input value, return true if is either an Array or an an Object 
@@ -48,11 +54,15 @@ function isObject(value) {
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    return (
+        Array.isArray(value) || 
+        (typeof value === 'object' && value !== null && !(value instanceof Date))
+      );
+    }
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input value, return the type of the value as a String
