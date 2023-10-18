@@ -12,22 +12,32 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
-for(var i = 1; i <= 100; i++) {
-    if(i % 3 === 0 && i 5 === 0) {
-        console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-        console.log("Fizz")
-        } else if (i % 5 === 0) {
+    function fizzBuzz() {
+        for (let i = 1; i <= 100; i++) {
+          // Check if the number is a multiple of both three and five
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log("izzBuzz");
+          }
+          // Check if the number is a multiple of three
+          else if (i % 3 === 0) {
+            console.log("Fizz");
+          }
+          // Check if the number is a multiple of five
+          else if (i % 5 === 0) {
             console.log("Buzz");
-        } else {
+          }
+          // If none of the above conditions are met, print the number itself
+          else {
             console.log(i);
+          }
         }
-    }
-}
-fizzBuzz()
-
+      }
+      
+      // Call the function to print the numbers according to the Fizz Buzz rules
+      fizzBuzz();
+      
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 

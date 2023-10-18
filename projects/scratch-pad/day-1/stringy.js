@@ -137,11 +137,16 @@ return stringOne + stringTwo
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-     
+    var args = Array.from(arguments);
 
-
+    // Use the Array's join method to concatenate the strings
+    var result = args.join("");
+  
+    return result;
+  }
+  
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given two Strings, return the longest of the two.
