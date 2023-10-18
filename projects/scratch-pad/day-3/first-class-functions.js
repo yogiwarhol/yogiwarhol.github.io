@@ -49,14 +49,12 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     return function(string) {
-        if (tring && inputString.length > 0) {
-            return String.character(0) === startsWith;
+        if (string && string.length > 0) {
+            return string.charAt(0) === startsWith;
         }
         return false; 
     };
 }
-    
-    
     
     // YOUR CODE ABOVE HERE //
 
@@ -68,14 +66,16 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    return function(string) {
-        return string.endsWith(endsWith);
+    return function (str) {
+        if (str && str.length > 0) {
+            return str.charAt(str.length - 1) === endsWith;
+        }
+        return false;
     };
 }
     
-    
-    
-    // YOUR CODE ABOVE HERE //
+ 
+ // YOUR CODE ABOVE HERE //
 
 
 /** 
