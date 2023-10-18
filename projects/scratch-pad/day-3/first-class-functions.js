@@ -14,13 +14,14 @@
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     return function(value) {
-        return value > base;
-    };
-}
-    
+        if (value > base){ return true;}
+     else {
+        return false;
+       }
+    }
 
-    
-    
+
+}
     // YOUR CODE ABOVE HERE //
 
 
@@ -36,8 +37,6 @@ function createLessThanFilter(base) {
     };
 }
     
-    
-    
     // YOUR CODE ABOVE HERE //
 
 
@@ -48,13 +47,16 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
+var freshStart = startsWith.toLowerCase();
+
     return function(string) {
-        if (string && string.length > 0) {
-            return string.charAt(0) === startsWith;
+        var vibeStart = string.toLowerCase();
+        if (vibeStart.charAt(0) === freshStart) {
+            return true }
+            else {return false}
         }
-        return false; 
     };
-}
+
     
     // YOUR CODE ABOVE HERE //
 
@@ -66,13 +68,17 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    return function (str) {
-        if (str && str.length > 0) {
-            return str.charAt(str.length - 1) === endsWith;
+    var freshEnd = endsWith.toLowerCase();
+    
+    return function(string) {
+        var cooEnd = string.toLowerCase();
+        if (cooEnd[cooEnd.length -1] === freshEnd[freshEnd.length -1]) { 
+            return true }
+            else {return false}
         }
-        return false;
+        
     };
-}
+
     
  
  // YOUR CODE ABOVE HERE //
