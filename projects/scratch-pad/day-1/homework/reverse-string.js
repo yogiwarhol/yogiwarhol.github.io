@@ -21,14 +21,10 @@
 
 function reverseString(hello) {
     // YOUR CODE GOES BELOW HERE //
-   var reversedString = ''
-   for (var i = reverseString.length - 1; i >= 0; i--) {
-    var char = reversedString[i]
-    reversedString = reversedString + char
-   }
-    return reversedString
-    // YOUR CODE GOES ABOVE HERE //
+    return hello.split('').reverse().join('');
 }
+    // YOUR CODE GOES ABOVE HERE //
+
 
 
 
