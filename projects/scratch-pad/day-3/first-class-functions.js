@@ -13,11 +13,11 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
     return function(value) {
         return value > base;
     };
 }
+    
 
     
     
@@ -48,12 +48,18 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+    return function(string) {
+        if (tring && inputString.length > 0) {
+            return String.character(0) === startsWith;
+        }
+        return false; 
+    };
+}
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
@@ -81,12 +87,21 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
+    var modifiedStrings = [];
     
+    for (let i = 0; i < strings.length; i++) {
+        var modifiedString = modify(strings[i]);
+        modifiedStrings.push(modifiedString);
+    }
+    
+    return modifiedStrings;
+}
+
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /** 
  * Given an Array of Strings and a Function designed to test the String in some 
@@ -100,10 +115,11 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-
+    return strings.every(test);
+}
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

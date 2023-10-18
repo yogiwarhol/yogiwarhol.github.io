@@ -24,6 +24,21 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     let result = [];
+
+    if (start <= end) {
+        // Case where start <= end
+        for (let i = start; i <= end; i++) {
+            result.push(i);
+        }
+    } else {
+        // Case where start > end (reverse order)
+        for (let i = start; i >= end; i--) {
+            result.push(i);
+        }
+    }
+
+    return result;
+}
     
     // Examples:
     console.log(range(8, 14)); // Output: [8, 9, 10, 11, 12, 13, 14]
@@ -33,7 +48,7 @@ function range(start, end) {
     
     
     // YOUR CODE GOES ABOVE HERE //
-}
+
 
 
 
