@@ -56,6 +56,35 @@ if (remoAni !== -1) {
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+function add(animals, animal) {
+  
+  if (!animal.hasOwnProperty('name') || animal.name.length === 0) {
+    console.log('Animal must have a valid name.');
+    return;
+  }
+
+  
+  if (!animal.hasOwnProperty('species') || animal.species.length === 0) {
+    console.log('Animal must have a valid species.');
+    return;
+  }
+
+  
+  var isNameUnique = animals.every(function (existingAnimal) {
+    return existingAnimal.name !== animal.name;
+  });
+
+  if (!isNameUnique) {
+    console.log('Animal name must be unique.');
+    return;
+  }
+
+  // If all conditions pass, add the new animal to the 'animals' array
+  animals.push(animal);
+}
+
+
+
 
 
 
